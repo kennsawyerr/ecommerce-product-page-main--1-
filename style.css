@@ -43,7 +43,16 @@
     list-style: none;
   }
 
+  *, *::after, *::before{
+    box-sizing: border-box;
+  }
+
   /* utilities */
+  .grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: max-content;
+  }
   .flex{
     display: flex;
     align-items: center;
@@ -64,6 +73,7 @@
   nav> .avatar{
     width: 50px;
     margin-left:40px;
+    
   }
   nav{
    
@@ -71,6 +81,10 @@
     margin: 0;
     border-bottom: 1px solid rgba(31, 22, 22, 0.25);
     /* background-color: brown; */
+  }
+
+  nav> img{
+    cursor: pointer;
   }
 
  nav li{
@@ -97,10 +111,25 @@
 
 
 
+
   /* main */
 
-  .image-product-1{
+  .image-container{
     width: 40%;
+  }
+
+  .image-product-1{
+    max-width: 100%;
+  }
+  
+  .smallImages{
+    width: 90px;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .smallImages:nth-child(4){
+    margin-right: 0;
   }
 
   .box{
@@ -126,12 +155,17 @@
 
    button{
     background-color: var(--Orange);
-    padding:  5px 30px ;
+    padding:  20px 100px ;
     margin: 5px;
     border-radius: 15px;
     cursor: pointer;
+    color: var(--White);
+    font-size: 15px;
+    border: 1px solid var(--Orange);
+    font-weight: 700;
+    box-shadow: 0px 10px  var(--Black-with-75opacityforlightboxbackground);
   }
-
+  
     main img{
       border-radius: 15px;
     }
@@ -158,4 +192,121 @@
   main h2{
     font-size: 1.8rem;
     margin-right: 20px;
+    
+  }
+  .discount{
+    padding: 5px 10px;
+    font-weight: 700;
+    background-color: var(--Pale-orange);
+    border-radius: 8px;
+  }
+
+  .oldP{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    margin:  15px 0;
+    font-weight: bold;
+  }
+
+  .quantityShoes{
+    width: 120px;
+    padding: 20px 10px;
+    background-color: var(--Light-grayish-blue);
+    margin-right: auto;
+    border-radius: 15px;
+  }
+
+  /* funtionalities */
+
+  #qtyNum{
+    margin:0 auto;
+   
+  }
+
+  /* Media queries */
+  @media screen and (max-width: 600px) {
+
+    nav ul{
+      visibility: hidden;
+      display: none;
+      width: 0;
+      
+    }
+
+    .box{
+      display: block;
+      width:auto;
+      padding: 0;
+    }
+
+    .container{
+      /* max-width: 350px; */
+      width: 100%;
+    }
+
+    .smallImages{
+      
+      display: none;
+    }
+    
+    .text-box2{
+      width:100%;
+    }
+    
+    .text-box{
+      width: 80%;
+      margin: auto;
+      display: block;
+    }
+
+
+    .image-container{
+      width: 100%;
+    }
+
+    
+    nav li{
+      padding: 0;
+    }
+    
+    nav img{
+      display: none;
+      position: absolute;
+      margin: 0;
+    }
+
+    nav img:nth-child(1){
+      display: block;
+    }
+
+    .flex{
+      width: 100%;
+    }
+
+    button{
+      width: 100%;
+      margin: 0;
+    }
+
+    nav{
+      width: 100%;
+      
+      padding: 20px 0;
+    }
+     
+    .cart{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+
+    main h1 {
+      font-size: 2rem;
+      margin: 10px 0;
+  }
+
+  section{
+    padding: 30px 0;
+  }
+
   }
