@@ -97,6 +97,8 @@
     cursor: pointer;
   }
 
+  
+
  nav li{
     padding: 40px 10px;
     color: var(--Dark-grayish-blue);
@@ -131,6 +133,43 @@
   }
 
 
+  /* SVG cart */
+
+   button{
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    
+  }
+  
+  .dropdownCart{
+    position:relative;
+    display: inline-block;
+  }
+  .dropdown-btn{
+    display: block;
+    border: 0;
+    background-color: transparent;
+  }
+  .dropdowncart-content{ 
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    padding: 50px 40px;
+    width: 150%;
+   
+
+  }
+  
+  .show{
+    display: block;
+  }
+
+  /* SVG cart ends */
+  
 
   /* main */
 
@@ -173,7 +212,7 @@
     color: var(--Pale-orange);
   }
 
-   button{
+  main .button{
     background-color: var(--Orange);
     padding:  20px 100px ;
     margin: 5px;
@@ -183,7 +222,12 @@
     font-size: 15px;
     border: 1px solid var(--Orange);
     font-weight: 700;
-    box-shadow: 0px 10px  var(--Black-with-75opacityforlightboxbackground);
+    box-shadow:0px 8px 6px 0px var(--Black-with-75opacityforlightboxbackground);
+  }
+  
+  main .button:hover{
+    background-color: var(--Grayish-blue);
+    box-shadow:0px 8px 6px 0px var(--Orange);
   }
   
     main img{
@@ -243,6 +287,8 @@
    
   }
 
+
+  
   /* Media queries */
   @media screen and (max-width: 600px) {
 
@@ -296,27 +342,39 @@
     nav li{
       padding: 0;
       line-height: 60px;
+      width: 100%;
+    
     }
     
     nav ul{
-      
+      width: 100%;
+      display: none;
       position: absolute;
       top: 10px;
       background-color: aliceblue;
       left: 0px;
       width: 50%;
-     margin-left: -350px;
-      
-      
-      transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
+      margin-left: -350px;
+   
+   
+    background-color: lightblue;
   
-    .navOpt{
+    margin: 0;
+  
+    position: absolute;
+    z-index: 99;
+    /* transition-property: margin, transform; */
+
+  }
+
+
+    .navShow{
       display: block;
-      height: fit-content;
-      background-color: lightblue;
+      height: 100%;
       margin-left:0;
-      
+      transition-timing-function: ease-in;
+      transition-duration: 1000ms;
+
     }
     nav img{
       display: none;

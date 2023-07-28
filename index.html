@@ -22,7 +22,7 @@
   <img src="images/logo.svg" alt="logo" class="logo">
 
   <img src="images/icon-menu.svg" alt="menu button" id="menuBtn">
-  <ul  id="navOpt" class="">
+  <ul  id="navOpt">
     <li>Collections</li>
     <li>Men</li>
     <li>Women</li>
@@ -30,7 +30,17 @@
     <li>Contact</li>
   </ul>
 
-  <img src="images/icon-cart.svg" alt="" >
+  <div class="dropdownCart">
+    <button onclick="Drop()" class="dropdown-btn">
+    <img src="images/icon-cart.svg" alt="" >
+    </button>
+
+      <div class="dropdowncart-content" id="dropdown">
+          The Container is empty
+
+      </div>
+    
+  </div>
 
   <img src="images/image-avatar.png" alt="" class="avatar">
   
@@ -70,11 +80,15 @@
  
       <div class="cart flex">
         <div class="flex quantityShoes">
-          <img src="images/icon-minus.svg" alt="" class="minus">
+          
+          <button class="btn minus flex"><img src="images/icon-minus.svg" alt="" class="minus"></button>
+          
           <span id="qtyNum">0</span>
-          <img src="images/icon-plus.svg" alt="" class="plus"></div>
-       <button class="">
-        <img src="images/icon-cart.svg" alt="" >
+
+          <button class="btn plus flex"> <img src="images/icon-plus.svg" alt="" class="plus"></button>
+        </div>
+       <button class="button">
+        <img src="images/icon-cart.svg" alt="Add to cart" >
         Add to cart</button> </div>
        </div>
   </div>
