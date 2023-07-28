@@ -351,18 +351,12 @@
       display: none;
       position: absolute;
       top: 10px;
-      background-color: aliceblue;
       left: 0px;
       width: 50%;
-      margin-left: -350px;
-   
-   
-    background-color: lightblue;
-  
-    margin: 0;
-  
-    position: absolute;
-    z-index: 99;
+      margin-left: -350px;   background-color: lightblue;
+      margin: 0;
+      position: absolute;
+      z-index: 99;
     /* transition-property: margin, transform; */
 
   }
