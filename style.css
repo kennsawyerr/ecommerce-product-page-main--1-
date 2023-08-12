@@ -335,21 +335,46 @@
       width: 100%;
     }
 /* nav */
-   nav, main{
+    main{
     margin: 30px 0;
     
    }
     nav li{
-      padding: 0;
+      padding: 5px 0;
+      font-weight: 900;
       width: 100%;
     
     }
+
+    nav ul{
+       display: grid;
+       width: 100%;
+       background-color: pink;
+       margin: auto;
+       text-align: center;
+    }
     
+    .close-btn
+    {
+      font-size: 1.4rem;
+      color: black;
+      background-color: transparent;
+      width: fit-content;
+      transition: all 0.3s linear ;
+    }
+
+    .close-btn:hover{
+      color: grey;
+      transform: rotate(180deg);
+    }
     .navMenu{
       width: 50%;
       height: 100%;
-    
+      margin: 0;
+      text-align: center;
+      padding: 20px;
       display: grid;
+      grid-template-rows: auto  auto  auto auto  auto  auto auto 1fr;
       top: 0;
       left:0;
       background-color: lightblue;
@@ -357,7 +382,7 @@
       z-index: 99;
       transition:  0.3s ease-in-out;
       position: fixed;
-      visibility: hidden;
+    
 
   }
 
