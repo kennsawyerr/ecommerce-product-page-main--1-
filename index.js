@@ -2,7 +2,7 @@ const menuBtn = document.getElementById("menuBtn");
 
 
 const navOpt = document.querySelector
-("#navOpt");
+(".navMenu");
 
 menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow")

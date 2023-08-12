@@ -341,34 +341,29 @@
    }
     nav li{
       padding: 0;
-      line-height: 60px;
       width: 100%;
     
     }
     
-    nav ul{
-      width: 100%;
-      display: none;
-      position: absolute;
-      top: 10px;
-      left: 0px;
+    .navMenu{
       width: 50%;
-      margin-left: -350px;   background-color: lightblue;
-      margin: 0;
-      position: absolute;
+      height: 100%;
+    
+      display: grid;
+      top: 0;
+      left:0;
+      background-color: lightblue;
+     transform: translate(-100%);
       z-index: 99;
-    /* transition-property: margin, transform; */
+      transition:  0.3s ease-in-out;
+      position: fixed;
 
   }
 
 
     .navShow{
-      display: block;
-      height: 100%;
-      margin-left:0;
-      transition-timing-function: ease-in;
-      transition-duration: 1000ms;
-
+      transform: translate(0);
+   
     }
     nav img{
       display: none;
