@@ -357,12 +357,14 @@
       z-index: 99;
       transition:  0.3s ease-in-out;
       position: fixed;
+      visibility: hidden;
 
   }
 
 
     .navShow{
       transform: translate(0);
+      visibility: unset;
    
     }
     nav img{
