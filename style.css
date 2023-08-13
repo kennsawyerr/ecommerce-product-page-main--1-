@@ -127,9 +127,7 @@
 
   #menuBtn{
     display: none;
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
+    
   }
 
 
@@ -168,10 +166,15 @@
     display: block;
   }
 
-  /* SVG cart ends */
+
+  /* 
+  
+  */
   
 
-  /* main */
+  /*===========
+   main
+   =========== */
 
   .image-container{
     width: 40%;
@@ -305,14 +308,10 @@
 
     #menuBtn{
       display: block;
-      top: 2.3rem;
+    
     }
 
-    
-  .logo{
-    padding-bottom: 10px;
-  }
-
+   
 
 
     .smallImages{
@@ -346,10 +345,13 @@
     
     }
 
+      
+   
     nav ul{
        display: grid;
        width: 100%;
-       background-color: pink;
+       margin: 0;
+       padding: 0;
        margin: auto;
        text-align: center;
     }
@@ -390,11 +392,15 @@
     .navShow{
       transform: translate(0);
       visibility: unset;
+      box-shadow: inset;
    
     }
+    nav .logo {
+      margin-right: auto;
+      margin-left: 32px;
+  }
+
     nav img{
-      display: none;
-      position: absolute;
       margin: 0;
     }
 
@@ -404,7 +410,10 @@
     }
 
      .navflex{
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: space-between;
     }
 
     /* nav ending */

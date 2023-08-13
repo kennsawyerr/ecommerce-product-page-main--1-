@@ -6,7 +6,14 @@ const navOpt = document.querySelector
 
 menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow")
+  
 })
+
+
+window.addEventListener("click",function(event){
+    if(event.target != menuBtn){navOpt.classList.remove("navShow") }
+
+} )
 
 
 
