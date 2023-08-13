@@ -125,7 +125,7 @@
   }
 
 
-  #menuBtn{
+  #menuBtn , .close-btn{
     display: none;
     
   }
@@ -306,7 +306,7 @@
       width: 100%;
     }
 
-    #menuBtn{
+    #menuBtn , .close-btn{
       display: block;
     
     }
