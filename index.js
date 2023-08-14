@@ -37,6 +37,7 @@ let slideImagesIDValue = 2;
 // ==========
 // navigation
 const menuBtn = document.getElementById("menuBtn");
+const overlay = document.querySelector(".overlay");
 
 
 
@@ -46,7 +47,9 @@ const navOpt = document.querySelector
 (".navMenu");
 
 menuBtn.addEventListener("click", ()=>{
-    navOpt.classList.toggle("navShow")
+    navOpt.classList.toggle("navShow");
+    // document.body.style.filter = "brightness(10%)";
+    overlay.classList.toggle("overlayShow");
   
 })
 
