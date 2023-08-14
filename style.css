@@ -112,6 +112,8 @@
     color: black;
   }
 
+
+
   ul{
    
    margin-top: 0;
@@ -122,6 +124,7 @@
   
   nav ul{
     display: flex;
+    margin-right: auto;
   }
 
 
@@ -357,6 +360,9 @@
       padding: 10px 0;
     }
 
+    nav:nth-child(all){
+      margin-right: auto;
+    }
       
    
     nav ul{
@@ -467,23 +473,34 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
   font-size: 27px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
   user-select: none;
+ 
+  }
+
+  .prev{
+    left: 4px;
   }
 
   .next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 4px;
+
   }
 
-  .next:hover, .prev:hover{
-   background-color: black;
+  .prev:hover{
+    background-color: #000;
   }
+
+  
+  /* next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
   }
