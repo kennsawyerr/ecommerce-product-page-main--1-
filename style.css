@@ -144,6 +144,7 @@
   .dropdownCart{
     position:relative;
     display: inline-block;
+    
   }
   .dropdown-btn{
     display: block;
@@ -152,12 +153,15 @@
   }
   .dropdowncart-content{ 
     position: absolute;
+  
     background-color: #f1f1f1;
     min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     display: none;
     padding: 50px 40px;
     width: 150%;
+    margin-left: -100px;
+    margin-top: 17px;
    
 
   }
@@ -293,9 +297,7 @@
 
   
   /* Media queries   ======
-   600 px
-  
-  ======*/
+   600 px ======*/
   @media screen and (max-width: 600px) {
 
     .box{
