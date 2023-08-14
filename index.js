@@ -1,4 +1,45 @@
+const slideImages=[
+    {
+        Id: 1,
+        img: "images/image-product-1.jpg",
+    
+    },
+
+    {
+        Id: 2,
+        img: "images/image-product-2.jpg",
+    
+    }
+,
+    {
+        Id: 3,
+        img: "images/image-product-3.jpg",
+    
+    }
+,
+    {
+        Id: 4,
+        img: "images/image-product-4.jpg",
+    
+    }
+
+
+]
+
+
+// slideshow data
+const IMG =document.getElementById("product-img");
+const prevBtn = document.querySelector(".prev")
+const nextBtn = document.querySelector(".next")
+let slideImagesIDValue = 2;
+
+
+// ==========
+// navigation
 const menuBtn = document.getElementById("menuBtn");
+
+
+
 
 
 const navOpt = document.querySelector
@@ -9,44 +50,43 @@ menuBtn.addEventListener("click", ()=>{
   
 })
 
-
+// removing navbar if other parts of the screen  is clicked
 window.addEventListener("click",function(event){
     if(event.target != menuBtn){navOpt.classList.remove("navShow") }
 
 } )
 
 
-
+// Dropdown menu
 function Drop() {
     document.getElementById("dropdown").classList.toggle("show");
 }
 
 
-let count = 0;
-
-const btns =document.querySelectorAll('.btn');
-const value =document.querySelector('#qtyNum');
+// Slide show buttons 
 
 
-
-
-
-btns.forEach(function (btn){
-btn.addEventListener("click", function (e)
-{const timz = e.currentTarget.classList;
-    if (timz.contains("minus")){
-        count--; }
-    else if( timz.contains("plus")){
-        count++
-    }
-    else(count=0)
+function showPerson(){
+    let item = slideImages[slideImagesIDValue];
+    IMG.src = item.img;
    
-    value.textContent=count;
+      }
 
-});
-});
+      nextBtn.addEventListener("click", function(){
+        slideImagesIDValue++
+        if( slideImagesIDValue > slideImages.length-1){
+            slideImagesIDValue= 0;
+        }
+        return showPerson(slideImagesIDValue)
+    })
+    
 
-//get all values with query selector
-
-
-
+    
+    
+    prevBtn.addEventListener("click", function(){
+        slideImagesIDValue--
+        if( slideImagesIDValue < 0 ){
+            slideImagesIDValue= slideImages.length-1;
+        }
+        return showPerson(slideImagesIDValue)
+    })
