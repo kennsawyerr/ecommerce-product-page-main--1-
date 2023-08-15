@@ -49,7 +49,8 @@ const navOpt = document.querySelector
 menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow");
     // document.body.style.filter = "brightness(10%)";
-    overlay.classList.toggle("overlayShow");
+    // overlay.classList.toggle("overlayShow");
+    document.overlay.style.filter="brightness(10%)"
   
 })
 
