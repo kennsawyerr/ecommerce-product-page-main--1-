@@ -49,10 +49,9 @@
 
 
   /* utilities */
-  .grid{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: max-content;
+  .flex_wrap{
+    display: flex;
+    flex-wrap: wrap;
   }
   .flex{
     display: flex;
@@ -73,6 +72,11 @@
 
 
   /* navbar */
+
+  .next,.prev{
+    display: none;
+    position: absolute;
+  }
   nav> .avatar{
     width: 50px;
     margin-left:40px;
@@ -98,6 +102,9 @@
   }
 
   
+  nav ul{
+    margin-right: auto;
+  }
 
  nav li{
     padding: 40px 10px;
@@ -147,6 +154,7 @@
   .dropdownCart{
     position:relative;
     display: inline-block;
+    margin-left: auto;
     
   }
   .dropdown-btn{
@@ -179,9 +187,6 @@
   }
 
 
-  /* 
-  
-  */
   
 
   /*===========
@@ -288,25 +293,41 @@
   }
 
   .quantityShoes{
-    width: 120px;
+    width: 100%;
     padding: 20px 10px;
     background-color: var(--Light-grayish-blue);
     margin-right: auto;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .quantityShoes img{
+    padding: 0;
+    margin: 0
   }
 
   /* funtionalities */
 
-  #qtyNum{
-    margin:0 auto;
-   
-  }
-
-
   
-  /* Media queries   ======
-   600 px ======*/
-  @media screen and (max-width: 600px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 900px) {
 
     .box{
       display: block;
@@ -432,7 +453,246 @@
 
   nav> .avatar {
     width: 30px;
-    margin-left: 0px;
+    
+}
+
+    nav img{
+      margin: 0;
+    }
+
+    nav img:nth-child(1){
+      display: block;
+      position: unset;
+    }
+
+     .navflex{
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: space-between;
+    }
+
+    /* nav ending */
+    .flex{
+      width: 100%;
+    }
+
+    button{
+      width: 100%;
+      margin: 0;
+    }
+
+     
+    .cart{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+
+    main h1 {
+      font-size: 2rem;
+      margin: 10px 0;
+  }
+
+  section{
+    padding: 30px 0;
+  }
+
+  /* ===========
+  Images section
+  ============*/
+
+  .image-product-1{
+    border-radius: 0px;
+  }
+
+  .prev, .next{
+   
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  user-select: none;
+ 
+  }
+
+  .prev{
+    left: 10px;
+  }
+
+  .next{
+    right: 10px;
+
+  }
+
+  .prev:hover{
+    background-color: #000;
+  }
+
+ 
+/* 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired darkness 
+    display: none;
+    pointer-events: none; /* Allows clicks to pass through the overlay to underlying elements 
+}
+
+.overlayShow {
+    display: block;
+} */
+
+  
+  /* next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
+  }
+
+
+
+    
+  /* Media queries   ======
+   600 px ======*/
+   @media screen and (max-width: 600px) {
+
+    .box{
+      display: block;
+      width:auto;
+      padding: 0;
+    }
+
+    .container{
+       
+      width: 100%;
+    }
+
+    #menuBtn , .close-btn{
+      display: block;
+    
+    }
+
+   
+
+
+    .smallImages{
+      
+      display: none;
+    }
+    
+    .text-box2{
+      width:100%;
+    }
+    
+    .text-box{
+      width: 80%;
+      margin: auto;
+      display: block;
+    }
+
+
+    .image-container{
+      width: 100%;
+    }
+/* nav */
+    main{
+    margin: 0px 0px  30px;
+    
+   }
+    nav li{
+      padding: 5px 0;
+      font-weight: 900;
+      width: 100%;
+    
+    }
+    nav{
+      max-width: 400px;
+      width: 80%;
+      margin: 0 auto;
+      border-bottom: none;
+      padding: 10px 0;
+    }
+
+    nav:nth-child(all){
+      margin-right: auto;
+    }
+      
+   
+    nav ul{
+       display: grid;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       margin: auto;
+       text-align: left;
+    }
+    
+    .close-btn
+    {
+      font-size: 1.4rem;
+      color: black;
+      background-color: transparent;
+      width: fit-content;
+      transition: all 0.3s linear ;
+    }
+
+    .close-btn:hover{
+      color: grey;
+      transform: rotate(180deg);
+    }
+    .innerbox{
+      background-color: #fff;
+      height: 100vh;
+      width: 50%;
+      padding: 20px;
+
+    }
+    .navMenu{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      text-align: center;
+      
+      display: grid;
+      grid-template-rows: auto  auto  auto auto  auto  auto auto 1fr;
+      top: 0;
+      left:0;
+      background-color: rgba(0, 0, 0, 0.5);
+     transform: translate(-100%);
+      z-index: 99;
+      transition:  0.3s ease-in-out;
+      position: fixed;
+    
+
+  }
+
+
+    .navShow{
+      transform: translate(0);
+      visibility: unset;
+      box-shadow: inset;
+   
+    }
+    nav .logo {
+      margin-right: auto;
+      margin: 0 32px;
+  }
+
+  nav> .avatar {
+    width: 30px;
+   
 }
 
     nav img{
