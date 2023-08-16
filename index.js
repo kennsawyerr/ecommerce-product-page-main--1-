@@ -103,5 +103,5 @@ function showPerson(){
         element.addEventListener("click", ()=> {
             
          this.classList.toggle("full")
-        })
+        }
     })
