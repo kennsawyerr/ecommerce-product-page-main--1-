@@ -50,7 +50,7 @@ menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow");
     // document.body.style.filter = "brightness(10%)";
     // overlay.classList.toggle("overlayShow");
-    document.overlay.style.filter="brightness(10%)"
+    // document.overlay.style.filter="brightness(10%)"
   
 })
 
@@ -93,4 +93,15 @@ function showPerson(){
             slideImagesIDValue= slideImages.length-1;
         }
         return showPerson(slideImagesIDValue)
+    })
+
+
+
+    const displayimages = document.querySelectorAll(".smallImages");
+
+    displayimages.forEach(element => {
+        element.addEventListener("click", ()=> {
+            
+         this.classList.toggle("full")
+        })
     })

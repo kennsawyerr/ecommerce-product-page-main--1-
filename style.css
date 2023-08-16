@@ -200,11 +200,25 @@
   .image-product-1{
     max-width: 100%;
   }
+
+  .smallImagesContainer{
+    position: relative;
+    width: 100%;
+    
+    background-color: lightgray;
+  }
   
   .smallImages{
     width: 90px;
     margin-right: auto;
     margin-top: 20px;
+  }
+
+  .full{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .smallImages:nth-child(4){
