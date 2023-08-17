@@ -48,15 +48,16 @@ const navOpt = document.querySelector
 
 menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow");
-    // document.body.style.filter = "brightness(10%)";
-    // overlay.classList.toggle("overlayShow");
-    // document.overlay.style.filter="brightness(10%)"
-  
+    overlay.style.visibility = "visible";
+ 
 })
 
 // removing navbar if other parts of the screen  is clicked
 window.addEventListener("click",function(event){
-    if(event.target != menuBtn){navOpt.classList.remove("navShow") }
+    if(event.target != menuBtn){navOpt.classList.remove("navShow");
+    overlay.style.visibility = "hidden";
+
+}
 
 } )
 

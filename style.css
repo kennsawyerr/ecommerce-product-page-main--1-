@@ -58,9 +58,6 @@
     align-items: center;
   }
 
-  
-
-
   .container{
     width: 80%;
     margin: auto;
@@ -71,7 +68,9 @@
   }
 
 
-  /* navbar */
+  /* ===========
+  navbar
+  ================ */
 
   .next,.prev{
     display: none;
@@ -104,6 +103,17 @@
   
   nav ul{
     margin-right: auto;
+  }
+
+  nav .overlay{
+    background-color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    top: 0;
+    left: 0;
   }
 
  nav li{
@@ -255,7 +265,6 @@
     cursor: pointer;
     color: var(--White);
     font-size: 15px;
-    /* border: 1px solid var(--Orange); */
     font-weight: 700;
     display: flex;
     gap: 10px;
@@ -434,12 +443,12 @@
     .innerbox{
       background-color: #fff;
       height: 100vh;
-      width: 50%;
+      width: 100%;
       padding: 20px;
 
     }
     .navMenu{
-      width: 100%;
+      width: 50%;
       height: 100%;
       margin: 0;
       text-align: center;
@@ -448,7 +457,7 @@
       grid-template-rows: auto  auto  auto auto  auto  auto auto 1fr;
       top: 0;
       left:0;
-      background-color: rgba(0, 0, 0, 0.5);
+     
      transform: translate(-100%);
       z-index: 99;
       transition:  0.3s ease-in-out;
@@ -560,15 +569,6 @@
 
  
 /* 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired darkness 
-    display: none;
-    pointer-events: none; /* Allows clicks to pass through the overlay to underlying elements 
 }
 
 .overlayShow {
@@ -673,12 +673,12 @@
     .innerbox{
       background-color: #fff;
       height: 100vh;
-      width: 50%;
+      width: 100%;
       padding: 20px;
 
     }
     .navMenu{
-      width: 100%;
+      width: 50%;
       height: 100%;
       margin: 0;
       text-align: center;
@@ -687,8 +687,7 @@
       grid-template-rows: auto  auto  auto auto  auto  auto auto 1fr;
       top: 0;
       left:0;
-      background-color: rgba(0, 0, 0, 0.5);
-     transform: translate(-100%);
+      transform: translate(-100%);
       z-index: 99;
       transition:  0.3s ease-in-out;
       position: fixed;
@@ -700,7 +699,7 @@
     .navShow{
       transform: translate(0);
       visibility: unset;
-      box-shadow: inset;
+  
    
     }
     nav .logo {
