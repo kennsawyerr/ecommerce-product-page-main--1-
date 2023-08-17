@@ -270,11 +270,11 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 8px 6px 0px var(--Black-with-75opacityforlightboxbackground);
+    box-shadow: rgb(255, 237, 224) 0px 20px 15px;
 }
   main .button:hover{
     background-color: var(--Grayish-blue);
-    box-shadow:0px 8px 6px 0px var(--Orange);
+   
   }
   
     main img{
