@@ -105,7 +105,7 @@
     margin-right: auto;
   }
 
-  nav .overlay{
+  .overlay{
     background-color: rgba(0, 0, 0, 0.75);
     visibility: hidden;
     position: fixed;
@@ -265,7 +265,6 @@
     cursor: pointer;
     color: var(--White);
     font-size: 15px;
-    font-weight: 700;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -287,6 +286,33 @@
     margin: 45px 0  15px 0;
     font-weight: 700;
   }
+
+
+  /* clickable Img */
+
+  .clickableImgContainer{
+    position: absolute;
+    width: 50%;
+    
+    max-width: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  
+    z-index: 80;
+    background-color: 1px solid #f1f1f1 ;
+  }
+
+  .clickableImg
+{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  width: 100%;
+
+}
 
   main h1{
     font-size: 2.8rem;

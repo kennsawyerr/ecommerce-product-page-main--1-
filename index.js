@@ -40,7 +40,27 @@ const menuBtn = document.getElementById("menuBtn");
 const overlay = document.querySelector(".overlay");
 
 
+const clickedImg =document.querySelector(".clickableImgContainer")
 
+
+
+// 
+function overlayStyle(){
+    overlay.style.visibility = "visible";
+   
+}
+// 
+// 
+// absolute image
+
+function ClickFullScreen(){
+    overlayStyle();
+     clickedImg.style.visibility="visible";
+}
+
+
+// 
+// 
 
 
 const navOpt = document.querySelector
@@ -48,14 +68,14 @@ const navOpt = document.querySelector
 
 menuBtn.addEventListener("click", ()=>{
     navOpt.classList.toggle("navShow");
-    overlay.style.visibility = "visible";
+    overlayStyle();
  
 })
 
 // removing navbar if other parts of the screen  is clicked
 window.addEventListener("click",function(event){
     if(event.target != menuBtn){navOpt.classList.remove("navShow");
-    overlay.style.visibility = "hidden";
+    // overlay.style.visibility = "hidden";
 
 }
 
@@ -98,12 +118,11 @@ function showPerson(){
 
 
 
-    const displayimages = document.querySelectorAll(".smallImages");
+    // const displayimages = document.querySelectorAll(".smallImages");
 
-    displayimages.forEach(element => {
-        element.addEventListener("click", ()=> {
+    // displayimages.forEach(element => {
+    //     element.addEventListener("click", ()=> {
             
-         this.classList.toggle("full")
-        })
-    })
-    // something was wrong with the menu-btn. testing
+    //      this.classList.toggle("full")
+    //     })
+    // })

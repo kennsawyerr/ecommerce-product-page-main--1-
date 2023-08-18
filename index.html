@@ -67,10 +67,18 @@
   <a class="next">&#10095;</a>
 </nav>
 
-<main class="overlay">
+<main>
 
   <section class="box">
-   <div class="image-container"><img src="images/image-product-1.jpg" alt="" class="image-product-1" id="product-img">
+    <section class="clickableImgContainer">
+      <img src="images/icon-close.svg"  class="close">
+      <img src="images/image-product-1.jpg"
+      alt="" class="clickableImg">
+
+      <!-- this img up would be chnaged to $
+        ${img} -->
+    </section>
+   <div class="image-container" onclick="ClickFullScreen()"><img src="images/image-product-1.jpg" alt="" class="image-product-1" id="product-img">
   
 
     <div class="flex_wrap smallImagesContainer">
