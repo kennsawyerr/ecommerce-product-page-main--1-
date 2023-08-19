@@ -75,9 +75,9 @@ menuBtn.addEventListener("click", () => {
     overlayStyle();
 })
 
-menuCloseBtn.addEventListener("click", function(){
-     navOpt.classList.remove("navShow");
-     noOverlayStyle();
+menuCloseBtn.addEventListener("click", function () {
+    navOpt.classList.remove("navShow");
+    noOverlayStyle();
 })
 
 // removing navbar if other parts of the screen  is clicked
