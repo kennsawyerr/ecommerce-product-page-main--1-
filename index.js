@@ -122,3 +122,23 @@ prevBtn.addEventListener("click", function () {
     }
     return showPerson(slideImagesIDValue)
 })
+
+
+/*
+
+  functionalities
+
+  1. add to cart from counter
+  2. Counter
+  3.View images 
+  4. sidebar nav on small screens
+
+
+
+
+
+
+
+
+
+*/

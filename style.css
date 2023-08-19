@@ -37,7 +37,7 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5{
   padding: 0;
   margin: 0;
 }
@@ -102,7 +102,7 @@ nav {
 .navflex {
   display: flex;
   align-items: center;
-}
+        }
 
 
 nav>img {
@@ -141,7 +141,6 @@ nav li:hover {
 
 
 ul {
-
   margin-top: 0;
   margin-bottom: 0;
   margin-right: auto;
@@ -152,7 +151,6 @@ nav ul {
   display: flex;
   margin-right: auto;
 }
-
 
 #menuBtn,
 .close-btn {
@@ -441,10 +439,18 @@ main h2 {
   }
 
 
+  .clickableImgContainer {
+    display: none;
+  }
 
+
+
+  .clickableImgContainer .smallImages {
+
+    display: block;
+  }
 
   .smallImages {
-
     display: none;
   }
 
@@ -651,9 +657,7 @@ main h2 {
   /* 
 }
 
-.overlayShow {
-    display: block;
-} */
+ */
 
 
   /* next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
@@ -684,6 +688,11 @@ main h2 {
   }
 
 
+
+  .clickableImgContainer .smallImages {
+
+    display: block;
+  }
 
 
   .smallImages {
@@ -883,23 +892,7 @@ main h2 {
     background-color: #000;
   }
 
-
-  /* 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired darkness 
+  .clickableImgContainer {
     display: none;
-    pointer-events: none; /* Allows clicks to pass through the overlay to underlying elements 
-}
-
-.overlayShow {
-    display: block;
-} */
-
-
-  /* next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
+  }
 }
