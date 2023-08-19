@@ -1,137 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
   <title>Frontend Mentor | E-commerce product page</title>
 
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  
+
   <div class="container">
 
- <nav class="navflex">
+    <nav class="navflex">
 
-  <img src="images/icon-menu.svg" alt="menu button" id="menuBtn">
+      <img src="images/icon-menu.svg" alt="menu button" id="menuBtn">
 
-  <img src="images/logo.svg" alt="logo" class="logo">
-  <div class="overlay"></div>
+      <img src="images/logo.svg" alt="logo" class="logo">
+      <div class="overlay"></div>
 
- 
 
-  <div class="navMenu">
-  <div class="innerbox">
-    <button class="close-btn"><i class="fas fa-times"></i></button>
 
-  <ul>
-    <li>Collections</li>
-    <li>Men</li>
-    <li>Women</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
- </div>
-</div>
+      <div class="navMenu">
+        <div class="innerbox">
+          <button class="close-btn"><i class="fas fa-times"></i></button>
 
-  <div class="dropdownCart">
-    <button onclick="Drop()" class="dropdown-btn">
-    <img src="images/icon-cart.svg" alt="" >
-    </button>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
 
-      <div class="dropdowncart-content" id="dropdown">
-        <h5>Cart</h5>
-        <hr>
+      <div class="dropdownCart">
+        <button onclick="Drop()" class="dropdown-btn">
+          <img src="images/icon-cart.svg" alt="">
+        </button>
+
+        <div class="dropdowncart-content" id="dropdown">
+          <h5>Cart</h5>
+          <hr>
           <p>The Container is empty</p>
 
-      </div>
-    
-  </div>
-
-  <img src="images/image-avatar.png" alt="" class="avatar">
-  
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</nav>
-
-<main>
-
-  <section class="box">
-    <section class="clickableImgContainer">
-      <img src="images/icon-close.svg"  class="close">
-      <img src="images/image-product-1.jpg"
-      alt="" class="clickableImg">
-
-      <!-- this img up would be chnaged to $
-        ${img} -->
-    </section>
-   <div class="image-container" onclick="ClickFullScreen()"><img src="images/image-product-1.jpg" alt="" class="image-product-1" id="product-img">
-  
-
-    <div class="flex_wrap smallImagesContainer">
-      
-    <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages">
-    <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages">
-    <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages">
-    <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages">
-   
-    </div>
-  
-  </div>
-    
-
-    <div class="text-box ">
-      <div class="text-box2">
-      <h3 class="orange">Sneaker Company</h3>
-  
-     <h1>Fall Limited Edition Sneakers</h1>
-  
-     <p> These low-profile sneakers are your perfect casual wear companion. Featuring a 
-      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      
-     <div class="flex"> <h2>$125.00</h2>
-      <span class="orange discount">50%</span>
-      </div>
-      
-      <div class="oldP"> $250.00 </div>
- 
-      <div class="cart flex">
-        <div class="  quantityShoes">
-          
-          <button class="btn minus"><img src="images/icon-minus.svg" alt="" class="minus"></button>
-          
-          <span id="qtyNum">0</span>
-
-          <button class="btn plus "> <img src="images/icon-plus.svg" alt="" class="plus"></button>
         </div>
-       <button class="button ">
-        <img src="images/icon-cart.svg" alt="Add to cart" >
-        Add to cart</button> </div>
-       </div>
-  </div>
-  </section>
 
-</main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Kehinde</a>.
+      </div>
+
+      <img src="images/image-avatar.png" alt="" class="avatar">
+
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </nav>
+
+    <main>
+
+      <section class="box">
+        <section class="clickableImgContainer">
+          <img src="images/icon-close.svg" class="closeClickableImg">
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+          <img src="images/image-product-1.jpg" alt="" class="clickableImg">
+          <div class="flex_wrap smallImagesContainer">
+
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages">
+
+          </div>
+
+          <!-- this img up would be chnaged to $
+        ${img} -->
+        </section>
+        <div class="image-container">
+          <img src="images/image-product-1.jpg" alt="" class="image-product-1" id="product-img"
+            onclick="ClickFullScreen()">
+
+
+
+          <div class="flex_wrap smallImagesContainer">
+
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages">
+
+          </div>
+
+        </div>
+
+
+        <div class="text-box ">
+          <div class="text-box2">
+            <h3 class="orange">Sneaker Company</h3>
+
+            <h1>Fall Limited Edition Sneakers</h1>
+
+            <p> These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+            <div class="flex">
+              <h2>$125.00</h2>
+              <span class="orange discount">50%</span>
+            </div>
+
+            <div class="oldP"> $250.00 </div>
+
+            <div class="cart flex">
+              <div class="  quantityShoes">
+
+                <button class="btn minus"><img src="images/icon-minus.svg" alt="" class="minus"></button>
+
+                <span id="qtyNum">0</span>
+
+                <button class="btn plus "> <img src="images/icon-plus.svg" alt="" class="plus"></button>
+              </div>
+              <button class="button ">
+                <img src="images/icon-cart.svg" alt="Add to cart">
+                Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Kehinde</a>.
+    </div>
+
   </div>
-  
-</div>
   <script src="index.js"></script>
 </body>
+
 </html>
