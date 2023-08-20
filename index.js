@@ -37,8 +37,35 @@ const menuCloseBtn = document.querySelector(".close-btn");
 const clickedImgContainer = document.querySelector(".clickableImgContainer")
 const navOpt = document.querySelector(".navMenu");
 const closeClickableImg = document.querySelector(".closeClickableImg");
+// counter functionalities
+const plusBtn = document.querySelector(".plus")
+const minusBtn = document.querySelector(".minus")
+const numberOfGoods = document.querySelector("#qtyNum");
+let count = 0
+// add to cart
+const cartBtn = document.querySelector("#addtocart")
 
 
+
+
+plusBtn.addEventListener("click", function () {
+    count++;
+    numberOfGoods.textContent = count;
+})
+
+minusBtn.addEventListener("click", function () {
+    count--;
+    numberOfGoods.textContent = count;
+})
+
+// //////////////break=============
+// //////////////////
+
+
+
+cartBtn.addEventListener("click", function(){
+    
+})
 //
 //
 //FUNCTIONS=====
@@ -51,14 +78,24 @@ function noOverlayStyle() {
     overlay.style.visibility = "hidden";
 }
 // 
-// shoe images but on large screen
+// show shoe images but on large screen
 function ClickFullScreen() {
-    overlayStyle();
-    clickedImgContainer.style.visibility = "visible";
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    if (viewportWidth <= 900) {
+        noOverlayStyle();
+    } else {
+        overlayStyle();
+        clickedImgContainer.style.visibility = "visible";
+    }
 }
 
 
+
+
+
 closeClickableImg.addEventListener("click", function () {
+
     clickedImgContainer.style.visibility = "hidden";
     noOverlayStyle()
 })
@@ -129,16 +166,14 @@ prevBtn.addEventListener("click", function () {
   functionalities
 
   1. add to cart from counter
-  2. Counter
-  3.View images 
-  4. sidebar nav on small screens
-
-
-
-
-
-
+  2. Counter DONE
+  3.View images  DONE
+  4. sidebar nav on small screens  DONE
 
 
 
 */
+
+function Counter() {
+
+}
