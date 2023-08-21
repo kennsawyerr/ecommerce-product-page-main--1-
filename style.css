@@ -26,6 +26,7 @@
   /* font */
   --Fontparagraph: 16px;
 }
+
 /* when on small screen, overlay is still a problem*/
 body {
   margin: 0;
@@ -37,7 +38,7 @@ h1,
 h2,
 h3,
 h4,
-h5{
+h5 {
   padding: 0;
   margin: 0;
 }
@@ -102,7 +103,7 @@ nav {
 .navflex {
   display: flex;
   align-items: center;
-        }
+}
 
 
 nav>img {
@@ -158,8 +159,37 @@ nav ul {
 
 }
 
-
+/* Slideshow */
 /* SVG cart */
+
+
+.absolute-num {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--Orange);
+  color: white;
+  border-radius: 15px;
+  padding: 0 2px;
+
+}
+
+.product-added {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+.product-added>img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid green;
+}
 
 button {
   padding: 0;

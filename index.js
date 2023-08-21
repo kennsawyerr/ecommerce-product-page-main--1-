@@ -33,7 +33,7 @@ let slideImagesIDValue = 2;
 const menuBtn = document.getElementById("menuBtn");
 const overlay = document.querySelector(".overlay");
 const menuCloseBtn = document.querySelector(".close-btn");
-//clicking on 
+//clicking on the image
 const clickedImgContainer = document.querySelector(".clickableImgContainer")
 const navOpt = document.querySelector(".navMenu");
 const closeClickableImg = document.querySelector(".closeClickableImg");
@@ -41,9 +41,11 @@ const closeClickableImg = document.querySelector(".closeClickableImg");
 const plusBtn = document.querySelector(".plus")
 const minusBtn = document.querySelector(".minus")
 const numberOfGoods = document.querySelector("#qtyNum");
-let count = 0
+let count = 0;
 // add to cart
-const cartBtn = document.querySelector("#addtocart")
+const cartBtn = document.querySelector("#addtocart");
+const dropdownContentforProductAdded = document.querySelector(".product-added");
+const absoluteNumforCartQuantity = document.querySelector(".absolute-num");
 
 
 
@@ -64,7 +66,11 @@ minusBtn.addEventListener("click", function () {
 
 
 cartBtn.addEventListener("click", function(){
-    
+
+   absoluteNumforCartQuantity.style.display="block";
+   dropdownContentforProductAdded.style.visibility="visible";
+
+
 })
 //
 //
