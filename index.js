@@ -34,7 +34,8 @@ const menuBtn = document.getElementById("menuBtn");
 const overlay = document.querySelector(".overlay");
 const menuCloseBtn = document.querySelector(".close-btn");
 //clicking on the image
-const clickedImgContainer = document.querySelector(".clickableImgContainer")
+const clickedImgContainer = document.querySelector(".clickableImgContainer");
+const clickableImage = document.querySelector(".clickableImg")
 const navOpt = document.querySelector(".navMenu");
 const closeClickableImg = document.querySelector(".closeClickableImg");
 // counter functionalities
@@ -46,6 +47,8 @@ let count = 0;
 const cartBtn = document.querySelector("#addtocart");
 const dropdownContentforProductAdded = document.querySelector(".product-added");
 const absoluteNumforCartQuantity = document.querySelector(".absolute-num");
+// hoverable img
+const hoverableThumbnails = document.querySelectorAll(".smallImages");
 
 
 
@@ -65,10 +68,12 @@ minusBtn.addEventListener("click", function () {
 
 
 
-cartBtn.addEventListener("click", function(){
-
-   absoluteNumforCartQuantity.style.display="block";
-   dropdownContentforProductAdded.style.visibility="visible";
+cartBtn.addEventListener("click", function () {
+    //make the "The Container is empty" invisible
+    document.getElementById("empty").style.display = "none";
+    absoluteNumforCartQuantity.style.display = "block";
+    dropdownContentforProductAdded.style.visibility = "visible";
+    
 
 
 })
@@ -108,7 +113,7 @@ closeClickableImg.addEventListener("click", function () {
 
 
 // 
-// 
+// if (qtyNum=0){add-to-cart button  CANNOT BE CLICKED}
 
 
 
@@ -167,16 +172,33 @@ prevBtn.addEventListener("click", function () {
 })
 
 
+
+
+
+hoverableThumbnails.addEventListener("click", function () {
+    hoverableThumbnails.forEach(true)
+    // {
+    clickableImage.innerHTML = ``
+    // }
+})
+
+
+
 /*
 
   functionalities
 
-  1. add to cart from counter
+  1. add to cart from counter DONE
   2. Counter DONE
   3.View images  DONE
   4. sidebar nav on small screens  DONE
+  5.Hoverable thumbnails and making their images bigger
 
-
+  PROBLEMS
+  1. Flex for thumbnails isnt allowing them take full width
+  2.absolute num for cart icon looks squeezed.
+  3.qtgy num is shaking continuiusly when numbers for #qtynum(nmber of goods) increases by 1
+  
 
 */
 

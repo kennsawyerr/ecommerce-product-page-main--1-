@@ -430,6 +430,9 @@ main h2 {
   margin: 0
 }
 
+#product-img {
+  transition: all 0.8s linear;
+}
 
 
 
@@ -690,7 +693,7 @@ main h2 {
  */
 
 
-  /* next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
+  /* .next:hover  .prev:hoverwas hanging and was freezing so i removed it completelu */
 }
 
 
