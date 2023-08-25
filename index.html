@@ -56,7 +56,7 @@
 
       <div class="dropdownCart">
         <button onclick="Drop()" class="dropdown-btn">
-          <div class="absolute-num">1</div>
+          <div><span id="qtyNum" class="absolute-num">0</span></div>
           <img src="images/icon-cart.svg" alt="">
         </button>
 
@@ -72,9 +72,9 @@
             <img src="images/image-product-1-thumbnail.jpg" alt="">
             <div>Fall Limited Edition Sneakers
               <br>
-              <p>$125 x qtynum = total</p>
+              <p>$125 x <span id="qtyNum"></span> = total</p>
             </div>
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times close-cart"></i>
           </div>
         </div>
 
@@ -169,4 +169,4 @@
   <script src="index.js"></script>
 </body>
 
-</html>
+</html> 

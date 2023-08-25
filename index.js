@@ -41,7 +41,8 @@ const closeClickableImg = document.querySelector(".closeClickableImg");
 // counter functionalities
 const plusBtn = document.querySelector(".plus")
 const minusBtn = document.querySelector(".minus")
-const numberOfGoods = document.querySelector("#qtyNum");
+const numberOfGoods = document.querySelectorAll("#qtyNum");
+console.log(numberOfGoods)
 let count = 0;
 // add to cart
 const cartBtn = document.querySelector("#addtocart");
@@ -49,34 +50,83 @@ const dropdownContentforProductAdded = document.querySelector(".product-added");
 const absoluteNumforCartQuantity = document.querySelector(".absolute-num");
 // hoverable img
 const hoverableThumbnails = document.querySelectorAll(".smallImages");
-
+// cart closing
+const closeCartBtn = document.querySelector(".close-cart");
 
 
 
 plusBtn.addEventListener("click", function () {
     count++;
-    numberOfGoods.textContent = count;
+    numberOfGoods.forEach(node => {
+        node.textContent = count;
+    });
+
 })
 
 minusBtn.addEventListener("click", function () {
     count--;
-    numberOfGoods.textContent = count;
+    numberOfGoods.forEach(node => {
+        node.textContent = count;
+    });
+
 })
 
+
 // //////////////break=============
+hoverableThumbnails.forEach(element => {
+    element.addEventListener("click", function () {
+        document.querySelector(".image-product-1").innerHTML = `
+            <img src="images/image-product-3.jpg" alt="img of a shoe" onclick="ClickFullScreen()" class="image-product-1" id="product-img">
+        `;
+    });
+});
+
+
+   
+
+
+/* picture navigation.
+  if i click on a smallImage, it shall open to big image
+   take small img
+      check the id of the small img
+      match the id on a big img 
+
+   display ihe big img  on big screen
+      
+
+
+*/
 // //////////////////
 
 
 
 cartBtn.addEventListener("click", function () {
-    //make the "The Container is empty" invisible
-    document.getElementById("empty").style.display = "none";
-    absoluteNumforCartQuantity.style.display = "block";
-    dropdownContentforProductAdded.style.visibility = "visible";
-    
 
+    // if (qtyNum=0){add-to-cart button  CANNOT BE CLICKED}
+    let numberOfGoods = count;
+
+
+    if (numberOfGoods !== 0) {
+        //make the "The Container is empty" invisible
+        document.getElementById("empty").style.display = "none";
+        absoluteNumforCartQuantity.style.display = "block";
+        dropdownContentforProductAdded.style.visibility = "visible";
+
+    } else if (numberOfGoods === 0) {
+        //make the "The Container is empty" visible
+        document.getElementById("empty").style.display = "unset";
+        absoluteNumforCartQuantity.style.display = "none";
+        dropdownContentforProductAdded.style.visibility = "hidden";
+
+    }
 
 })
+
+
+closeCartBtn.addEventListener("click", function () {
+    Drop()
+})
+
 //
 //
 //FUNCTIONS=====
@@ -113,7 +163,15 @@ closeClickableImg.addEventListener("click", function () {
 
 
 // 
-// if (qtyNum=0){add-to-cart button  CANNOT BE CLICKED}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -150,7 +208,7 @@ function showPerson() {
     let item = slideImages[slideImagesIDValue];
     IMG.src = item.img;
 
-}
+} ;
 
 nextBtn.addEventListener("click", function () {
     slideImagesIDValue++
@@ -175,12 +233,8 @@ prevBtn.addEventListener("click", function () {
 
 
 
-hoverableThumbnails.addEventListener("click", function () {
-    hoverableThumbnails.forEach(true)
-    // {
-    clickableImage.innerHTML = ``
-    // }
-})
+// \
+
 
 
 
@@ -201,7 +255,3 @@ hoverableThumbnails.addEventListener("click", function () {
   
 
 */
-
-function Counter() {
-
-}
