@@ -265,6 +265,10 @@ button {
   width: 90px;
 }
 
+.smallImages2 {
+  width: 90px;
+}
+
 .smallImages:active {
   border: 1px solid var(--Orange);
   opacity: 0.5;
@@ -440,6 +444,17 @@ button>img {
 }
 
 
+#addtocart img {
+  filter: brightness(5);
+}
+
+#addtocart {
+  margin: 7px;
+}
+
+#addtocart:hover {
+  opacity: 70%;
+}
 
 
 
@@ -736,6 +751,12 @@ button>img {
 
     display: none;
   }
+
+  .smallImages2 {
+
+    display: none;
+  }
+
 
   .text-box2 {
     width: 100%;

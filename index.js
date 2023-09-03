@@ -49,7 +49,7 @@ const cartBtn = document.querySelector("#addtocart");
 const dropdownContentforProductAdded = document.querySelector(".product-added");
 const absoluteNumforCartQuantity = document.querySelector(".absolute-num");
 // hoverable img
-const hoverableThumbnails = document.querySelectorAll(".smallImages");
+const hoverableThumbnails = Array.from(document.querySelectorAll(".smallImages"));
 // cart closing
 const closeCartBtn = document.querySelector(".close-cart");
 
@@ -63,6 +63,15 @@ plusBtn.addEventListener("click", function () {
 
 })
 
+
+
+// function showPerson() {
+//     let item = slideImages[value];
+//                  object            
+//     IMG.src = item.img;
+
+// };
+
 minusBtn.addEventListener("click", function () {
     count--;
     numberOfGoods.forEach(node => {
@@ -73,16 +82,32 @@ minusBtn.addEventListener("click", function () {
 
 
 // //////////////break=============
+// hoverableThumbnails.forEach(element => {
+//     element.addEventListener("click", function () {
+
+//         let indexNum = indexOf(element)
+//         console.log(indexNum)
+//         IMGdisplay = slideImages[indexNum];
+//         IMG.textContent = IMGdisplay
+
+
+//     });
+// });
+
+
+
+
 hoverableThumbnails.forEach(element => {
     element.addEventListener("click", function () {
-        document.querySelector(".image-product-1").innerHTML = `
-            <img src="images/image-product-3.jpg" alt="img of a shoe" onclick="ClickFullScreen()" class="image-product-1" id="product-img">
-        `;
+        const indexNum = hoverableThumbnails.indexOf(element);
+        console.log(indexNum);
+        const IMGdisplay = slideImages[indexNum];
+       
+        showPerson(IMGdisplay)
     });
 });
 
 
-   
 
 
 /* picture navigation.
@@ -204,11 +229,11 @@ function Drop() {
 // Slide show buttons 
 
 
-function showPerson() {
-    let item = slideImages[slideImagesIDValue];
+function showPerson(value) {
+    let item = slideImages[value];
     IMG.src = item.img;
 
-} ;
+};
 
 nextBtn.addEventListener("click", function () {
     slideImagesIDValue++
