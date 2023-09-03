@@ -73,7 +73,9 @@ plusBtn.addEventListener("click", function () {
 // };
 
 minusBtn.addEventListener("click", function () {
-    count--;
+    if (count > 0) {
+        count--;
+    }
     numberOfGoods.forEach(node => {
         node.textContent = count;
     });
@@ -100,9 +102,7 @@ minusBtn.addEventListener("click", function () {
 hoverableThumbnails.forEach(element => {
     element.addEventListener("click", function () {
         const indexNum = hoverableThumbnails.indexOf(element);
-        console.log(indexNum);
         const IMGdisplay = slideImages[indexNum];
-       
         showPerson(IMGdisplay)
     });
 });
@@ -230,10 +230,15 @@ function Drop() {
 
 
 function showPerson(value) {
+    
     let item = slideImages[value];
-    IMG.src = item.img;
+    IMG.src = item.img
+    console.log("item.img", item.img)
+    console.log("images.img", IMG.src)
 
 };
+
+showPerson()
 
 nextBtn.addEventListener("click", function () {
     slideImagesIDValue++
