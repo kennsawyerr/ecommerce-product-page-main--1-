@@ -1,41 +1,9 @@
-const slideImages = [{
-        Id: 1,
-        img: "images/image-product-1.jpg",
-
-    },
-
-    {
-        Id: 2,
-        img: "images/image-product-2.jpg",
-
-    },
-    {
-        Id: 3,
-        img: "images/image-product-3.jpg",
-
-    },
-    {
-        Id: 4,
-        img: "images/image-product-4.jpg",
-
-    }
-
-
-]
-
-
-// slideshow data
-const IMG = document.getElementById("product-img");
-const prevBtn = document.querySelector(".prev")
-const nextBtn = document.querySelector(".next")
-let slideImagesIDValue = 2;
 // navigation
 const menuBtn = document.getElementById("menuBtn");
 const overlay = document.querySelector(".overlay");
 const menuCloseBtn = document.querySelector(".close-btn");
 //clicking on the image
 const clickedImgContainer = document.querySelector(".clickableImgContainer");
-const clickableImage = document.querySelector(".clickableImg")
 const navOpt = document.querySelector(".navMenu");
 const closeClickableImg = document.querySelector(".closeClickableImg");
 // counter functionalities
@@ -49,9 +17,13 @@ const cartBtn = document.querySelector("#addtocart");
 const dropdownContentforProductAdded = document.querySelector(".product-added");
 const absoluteNumforCartQuantity = document.querySelector(".absolute-num");
 // hoverable img
-const hoverableThumbnails = Array.from(document.querySelectorAll(".smallImages"));
+
 // cart closing
 const closeCartBtn = document.querySelector(".close-cart");
+
+const prevBtn = document.querySelector(".prev")
+const NextBtn = document.querySelector(".next")
+
 
 
 
@@ -63,15 +35,6 @@ plusBtn.addEventListener("click", function () {
 
 })
 
-
-
-// function showPerson() {
-//     let item = slideImages[value];
-//                  object            
-//     IMG.src = item.img;
-
-// };
-
 minusBtn.addEventListener("click", function () {
     if (count > 0) {
         count--;
@@ -82,46 +45,26 @@ minusBtn.addEventListener("click", function () {
 
 })
 
+// ========================//
 
-// //////////////break=============
-// hoverableThumbnails.forEach(element => {
-//     element.addEventListener("click", function () {
+// slideshow arrows controls
+prevBtn.addEventListener("click", function () {
+    plusSlides(-1);
+})
 
-//         let indexNum = indexOf(element)
-//         console.log(indexNum)
-//         IMGdisplay = slideImages[indexNum];
-//         IMG.textContent = IMGdisplay
-
-
-//     });
-// });
+NextBtn.addEventListener("click", function () {
+    plusSlides(1);
+})
 
 
 
 
-hoverableThumbnails.forEach(element => {
-    element.addEventListener("click", function () {
-        const indexNum = hoverableThumbnails.indexOf(element);
-        const IMGdisplay = slideImages[indexNum];
-        showPerson(IMGdisplay)
-    });
-});
 
 
 
 
-/* picture navigation.
-  if i click on a smallImage, it shall open to big image
-   take small img
-      check the id of the small img
-      match the id on a big img 
-
-   display ihe big img  on big screen
-      
 
 
-*/
-// //////////////////
 
 
 
@@ -153,8 +96,6 @@ closeCartBtn.addEventListener("click", function () {
 })
 
 //
-//
-//FUNCTIONS=====
 // 
 function overlayStyle() {
     overlay.style.visibility = "visible";
@@ -187,17 +128,6 @@ closeClickableImg.addEventListener("click", function () {
 })
 
 
-// 
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -211,77 +141,101 @@ menuCloseBtn.addEventListener("click", function () {
     noOverlayStyle();
 })
 
-// removing navbar if other parts of the screen  is clicked
-// window.addEventListener("click", function (event) {
-//     if (event.target != menuBtn) {
-//         navOpt.classList.remove("navShow");
-//         // overlay.style.visibility = "hidden";
-//     }
-// })
-
-
 // Dropdown menu
 function Drop() {
     document.getElementById("dropdown").classList.toggle("show");
 }
 
 
-// Slide show buttons 
 
 
-function showPerson(value) {
-    
-    let item = slideImages[value];
-    IMG.src = item.img
-    console.log("item.img", item.img)
-    console.log("images.img", IMG.src)
 
-};
 
-showPerson()
+// slideshow 
 
-nextBtn.addEventListener("click", function () {
-    slideImagesIDValue++
-    if (slideImagesIDValue > slideImages.length - 1) {
-        slideImagesIDValue = 0;
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("clickableImg");
+    let dots = document.getElementsByClassName("smallImages");
+    if (n > slides.length) { //restart it when it reaches the end.length
+        slideIndex = 1
     }
-    return showPerson(slideImagesIDValue)
-})
-
-
-
-
-prevBtn.addEventListener("click", function () {
-    slideImagesIDValue--
-    if (slideImagesIDValue < 0) {
-        slideImagesIDValue = slideImages.length - 1;
+    if (n < 1) {
+        slideIndex = slides.length //reset to the last element when its less than 1
     }
-    return showPerson(slideImagesIDValue)
-})
+    for (i = 0; i < slides.length; i++) { // each picture is hidden . as long as i is = 0 && i<length, go thru each one and make all slides not to show at all.
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) { //
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
 
 
 
 
 
-// \
 
 
 
 
-/*
 
-  functionalities
 
-  1. add to cart from counter DONE
-  2. Counter DONE
-  3.View images  DONE
-  4. sidebar nav on small screens  DONE
-  5.Hoverable thumbnails and making their images bigger
 
-  PROBLEMS
-  1. Flex for thumbnails isnt allowing them take full width
-  2.absolute num for cart icon looks squeezed.
-  3.qtgy num is shaking continuiusly when numbers for #qtynum(nmber of goods) increases by 1
-  
 
-*/
+
+// slideshow 2
+
+
+let slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides2(slideIndex2 += n);
+}
+
+
+
+
+// Thumbnail image controls
+function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+    let i;
+    let slides2 = document.getElementsByClassName("clickableImg2");
+    let dots2 = document.getElementsByClassName("smallImages2");
+    if (n > slides2.length) { //restart it when it reaches the end.length
+        slideIndex2 = 1
+    }
+    if (n < 1) {
+        slideIndex2 = slides2.length //reset to the last element when its less than 1
+    }
+    for (i = 0; i < slides2.length; i++) { // each picture is hidden . as long as i is = 0 && i<length, go thru each one and make all slides not to show at all.
+        slides2[i].style.display = "none";
+    }
+    for (i = 0; i < dots2.length; i++) { //
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2 - 1].style.display = "block";
+}
+
+
+// counter  Done
+// slideshow arrows  Done
+//cart
+//flex done

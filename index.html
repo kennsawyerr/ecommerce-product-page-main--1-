@@ -70,11 +70,12 @@
 
           <div class="product-added">
             <img src="images/image-product-1-thumbnail.jpg" alt="">
-            <div>Fall Limited Edition Sneakers
+            <div><b>Fall Limited Edition Sneakers</b>
               <br>
               <p>$125 x <span id="qtyNum"></span> = total</p>
             </div>
-            <i class="fas fa-times close-cart"></i>
+
+            <img src="images/icon-delete.svg" class="close-cart" alt="">
           </div>
         </div>
 
@@ -83,8 +84,6 @@
 
       <img src="images/image-avatar.png" alt="" class="avatar">
 
-      <a class="prev">&#10094;</a>
-      <a class="next">&#10095;</a>
     </nav>
 
     <main>
@@ -92,33 +91,66 @@
       <section class="box">
         <section class="clickableImgContainer">
           <img src="images/icon-close.svg" class="closeClickableImg">
-          <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a>
-          <img src="images/image-product-1.jpg" alt="" class="clickableImg">
+
+          <div class="clickableImg">
+            <img src="images/image-product-1.jpg" alt="">
+          </div>
+
+          <div class="clickableImg">
+            <img src="images/image-product-2.jpg" alt="">
+          </div>
+
+          <div class="clickableImg">
+            <img src="images/image-product-3.jpg" alt="">
+          </div>
+
+          <div class="clickableImg">
+            <img src="images/image-product-4.jpg" alt="">
+          </div>
+
+
           <div class="flex_wrap smallImagesContainer">
 
-            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages2">
-            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages2">
-            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages2">
-            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages2">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages active" onclick="currentSlide(1)">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages" onclick="currentSlide(2)">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages" onclick="currentSlide(3)">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages" onclick="currentSlide(4)">
 
           </div>
 
-          <!-- this img up would be chnaged to $
-        ${img} -->
-        </section>
-        <div class="image-container">
-          <img src="images/image-product-1.jpg" alt="" class="image-product-1" id="product-img"
-            onclick="ClickFullScreen()">
 
+        </section>
+
+
+        <div class="image-container">
+
+          <div class="clickableImg2">
+            <img src="images/image-product-1.jpg" alt="" onclick="ClickFullScreen()">
+          </div>
+
+          <div class="clickableImg2">
+            <img src="images/image-product-2.jpg" alt="" onclick="ClickFullScreen()">
+          </div>
+
+          <div class="clickableImg2">
+            <img src="images/image-product-3.jpg" alt="" onclick="ClickFullScreen()">
+          </div>
+
+          <div class="clickableImg2">
+            <img src="images/image-product-4.jpg" alt="" onclick="ClickFullScreen()">
+          </div>
+
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
 
 
           <div class="flex_wrap smallImagesContainer">
 
-            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages">
-            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages">
-            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages">
-            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="smallImages2 active"
+              onclick="currentSlide2(1)">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" class="smallImages2" onclick="currentSlide2(2)">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" class="smallImages2" onclick="currentSlide2(3)">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" class="smallImages2" onclick="currentSlide2(4)">
 
           </div>
 
@@ -169,4 +201,4 @@
   <script src="index.js"></script>
 </body>
 
-</html> 
+</html>
