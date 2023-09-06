@@ -92,7 +92,10 @@ cartBtn.addEventListener("click", function () {
 
 
 closeCartBtn.addEventListener("click", function () {
-    Drop()
+    //make the "The Container is empty" visible
+    document.getElementById("empty").style.display = "unset";
+    absoluteNumforCartQuantity.style.display = "none";
+    dropdownContentforProductAdded.style.visibility = "hidden";
 })
 
 //
