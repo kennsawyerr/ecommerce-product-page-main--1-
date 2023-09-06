@@ -720,6 +720,9 @@ button>img {
     opacity: 0.75;
   }
 
+  .btn {
+    user-select: none;
+  }
 
   /* 
 }
@@ -784,6 +787,10 @@ button>img {
     display: block;
   }
 
+
+  .btn {
+    user-select: none;
+  }
 
   .image-container {
     width: 100%;
