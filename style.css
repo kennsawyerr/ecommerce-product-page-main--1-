@@ -32,6 +32,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
+  max-widht: 1200px;
+  margin: auto;
 }
 
 h1,
